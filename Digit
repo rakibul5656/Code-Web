@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+<style>
+  body {
+    font-size: 15pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow: auto
+}
+.c2, .sign_up{
+   display: none;
+   position: absolute;
+   z-index: 1;
+   border: 1px solid grey;
+   border-radius: 5px;
+   background: white;
+   overflow: auto;
+   animation: anmzoom 0.6s;
+   color: white;
+   height: auto;
+   width: 80%;
+   top: 10%;
+   left: 8%;
+   right: 10%;
+   padding: 10px;
+   box-shadow: 10px 10px 30px 10px gray;
+   
+   
+   
+}
+.frm, .frm2{
+   width: 100%;
+   background: white;
+   color: black;
+   overflow: auto;
+   padding: 0px;
+   background: white;
+   color: black;
+}
+.x{
+   position: absolute;
+   right: 10px;
+   font-size: 30px;
+color: red;
+}
+@keyframes anmzoom{
+   from { transform: scale(0)}
+   to { transform: scale(1)}
+}
+
+input{
+   border: 3px;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   width: 100%;
+   height: 30px;
+   background: none;
+   cursor: pointer;
+	 font-size: 15px;
+}
+
+@keyframes zoomout{
+   from { transform: scale(1)}
+   to { transform: scale(0)}
+}
+button{
+  font-weight: bold;
+  font-size: 20px;
+  border: 0;
+  background: none;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flx{
+   display: flex;
+   justify-content: auto;
+}
+input:hover{
+   color: green;
+   border: none;
+}
+.clos:hover{
+   color: white;
+   background: red;
+}
+.sbmt:hover{
+color: lightgrey;
+}
+.x:hover {
+   color: white;
+   background: red;
+}
+.log:hover {
+   color: lightgrey;
+}
+
+.clos{
+   position: absolute;
+   bottom: 8px;
+   right: 10px;
+   padding: 10px;
+   background: white;
+   border-radius: 3px 0 0 0;
+color: black;
+   
+}
+.sbmt, .log{
+	color: black;
+   background: white;
+   position: absolute;
+   bottom: 8px;
+   left: 10px;
+   padding: 10px;
+   border-radius: 0 3px 0 0;
+}
+p{
+   padding: 3px;
+}
+legend{
+   font-weight: bold;
+   font-family: Times New Roman;
+   font-size: 18px;
+}
+.trms{
+   display: inline-block;
+   font-size: 12px;
+}
+.digit{
+   position: absolute;
+   text-align: center;
+   top: 40%;
+   left: 30%;
+   font-size: 14px;
+   text-align: justify-content;
+   font-family: monospace;
+}
+
+.btn1, .btn2{
+  font-family: monospace;
+  color: gray;
+  font-size: 13px;
+}
+
+
+.d{
+   font-family: cursive;
+   font-size: 100px;
+   text-shadow: 2px 2px 2px;
+   left: 30%;
+   top: 40%;
+}
+.i{
+   color: green;
+}
+.ii{
+   color: hotpink;
+}
+.dd{
+   color: lightskyblue;
+	
+}
+.t{
+   color: violet;
+}
+.btn1:hover{
+   color: black;
+   font-size: 20px;
+}
+.btn2:hover{
+   color: black;
+   font-size: 20px;
+   
+}
+center{
+color: black;
+}
+</style>
+</head>
+
+<body>
+
+            <div class="digit">
+              <span class="d"><span class="dd">D</span><span class="i">i</span>g<span class="ii">i</span><span class="t">t</span></span>
+           
+   
+   <button class="btn1" type="submit" onclick="document.getElementById('fa').style.display= 'block'">Log In</button>
+   
+      <p class="h">Haven’t you an account? <button class="btn2" type="submit" onclick="document.getElementById('sn').style.display= 'block'">Sign Up</button></p>
+   
+            </div>
+   <div>
+
+   
+<div class="c2" id="fa">
+  <button type="submit" class="x" onclick="document.getElementById('fa').style.display= 'none'">×</button>
+
+  <center><h3>Log In</h3></center>
+     <form class="frm2" action="" method="get" accept-charset="utf-8"><br />
+  <fieldset>
+     <legend>Username</legend>
+    <input type="text" name="" id="" value="" placeholder="Username" required />
+  </fieldset>
+    
+    <fieldset>
+       <legend>Password</legend>
+    <input type="password" name="" id="" value="" placeholder="Password" required />
+    </fieldset>
+    <br /><br />
+   
+    <button type="submit" class="log">Log in</button>
+    <button type="submit" class="clos" onclick="document.getElementById('fa').style.display= 'none'">Cancel</button>
+   </form> 
+  </div> 
+  
+   <div class="sign_up" id="sn">
+   <button type="submit" class="x" onclick="document.getElementById('sn').style.display= 'none'">×</button>
+
+               <center> <h1>Sign Up</h1></center>
+      <form action="" method="get" accept-charset="utf-8" class="frm"><br />
+         <div class="flx">
+         <fieldset style="flex-grow: 1">
+            <legend>First Name</legend>
+    <input type="text" name="" id="" value="" placeholder="First Name" required/>
+    </fieldset>
+   
+       <fieldset style="flex-grow: 1">
+          <legend>Last Name</legend>
+    <input type="text" name="" id="" value="" placeholder="Last Name" required/>
+       </fieldset>
+         </div>
+         
+    <fieldset>
+       <legend>Username</legend>
+    <input type="text" name="" id="" value="" placeholder="Username" required />
+    </fieldset>
+    
+    <fieldset>
+       <legend>Mobile Number</legend>
+    <input type="number" name="" id="" value="" placeholder="Mobile Number" required />
+    </fieldset>
+    
+    <fieldset>
+       <legend>E-mail</legend>
+    <input type="text" name="" id="" value="" placeholder="E-mail "/>
+    </fieldset>
+    <span style="font-size: 12px; padding-left: 4px;"><b>Note:</b> Password must be greater than 6 character. </span>
+    <fieldset>
+       <legend>Password</legend>
+    <input type="password" name="" id="" value="" placeholder="Password" required />
+        </fieldset>
+        
+    <fieldset>
+           <legend>Confirm Password</legend>
+           <input type="password" name="" id="" placeholder="Confirm Password" required />
+        </fieldset>
+        
+   <br /><br />
+   
+    <button type="submit" class="sbmt">Submit</button>
+    <button type="submit" class="clos" onclick="document.getElementById('sn').style.display= 'none'">Cancel</button>
+    
+      </form>
+      
+   </div>
+   
+   
+   
+</div>   
+   
+   
+   
+   
+
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
